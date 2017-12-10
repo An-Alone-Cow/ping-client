@@ -4,6 +4,7 @@ import network
 
 
 def _show_menu(message):
+    os.system('clear')
     if message:
         print(message)
 
@@ -22,7 +23,7 @@ def _run(cmd):
         return network.ping()
 
     if cmd == '2':
-        network.list_pings()
+        return network.list_pings()
 
     if cmd == '3':
         exit()

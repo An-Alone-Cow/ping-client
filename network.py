@@ -25,6 +25,6 @@ def _show_content(content):
 def list_pings():
     response = get(settings.url['list_pings'])
 
-    content = serializer.serialize(response.content)
+    content = serializer.serialize(str(response.content)[2:-1])
     _show_content(content)
 
